@@ -33,7 +33,6 @@ data "aws_subnets" "public" {
   }
 }
 #cluster provision
- provider "aws" {region="us-east-1"}
 resource "aws_eks_cluster" "example" {
   name     = "EKS_CLOUD"
   role_arn = aws_iam_role.example.arn 
